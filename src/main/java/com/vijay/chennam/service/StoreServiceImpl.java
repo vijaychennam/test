@@ -15,4 +15,9 @@ public class StoreServiceImpl implements StoreService {
     public Store saveStore(Store store) {
         return storeRepository.save(store);
     }
+
+    @Override
+    public Store saveStore(Integer storeId) {
+        return storeRepository.findById(storeId).get();
+    }
 }

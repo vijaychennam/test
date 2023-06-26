@@ -20,4 +20,10 @@ public class StoreController {
         return storeService.saveStore(store);
     }
 
+    @GetMapping("/getStore/{storeId}")
+    @ResponseStatus(HttpStatus.OK)
+    public Store saveSore(@PathVariable("storeId") Integer storeId) {
+
+        return storeService.saveStore(storeId);
+    }
 }
